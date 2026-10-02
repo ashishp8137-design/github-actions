@@ -5,10 +5,21 @@ on:
     branches: [main]
 # These are jobs inside the workflow
 jobs:
-  runs-on: ubuntu-latest
+
+# this is the name of the job
+  
   greet:
+
+  # this is github runner , each job on a runner
+    runs-on: ubuntu-latest
     steps:
-      - name: Sayhello to users
-        run: echo"Hello dosto"
+      - name: Say hello to users
+        run: echo "Hello Dosto"
       - name: say to username
         run: "Hello $USER"
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: version of python, docker, etc
+        run: docker --version && python --version
+      - 
